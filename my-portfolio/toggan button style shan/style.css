@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --indicator-color: hsl(0, 0%, 100%);
+    --body-color: hsl(233, 12%, 14%);
+    --container-color: hsl(233, 12%, 20%);
+    --container-color-light: hsl(233, 12%, 26%);
+}
+
+body {
+    background-color: var(--body-color);
+}
+
+.num{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+div input {
+    display: none;
+}
+
+div label {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: var(--container-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 300ms linear;
+
+}
+
+div label::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: radial-gradient(var(--indicator-color), var(--container-color-light));
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 0 5px 10px   rgb(3, 2, 1);
+}
+
+div input:checked + label{
+    background-color: var(--indicator-color);
+    box-shadow: 2px 2px 20px rgb(255, 255, 255);
+}
+div input:checked + label::before{
+    left: 105px;
+    box-shadow: 2px 2px 100px rgb(255, 255, 255);
+}
