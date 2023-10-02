@@ -2,11 +2,9 @@
 
 
 * {
-
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Work Sans', sans-serif;
 }
 
 :root {
@@ -23,15 +21,15 @@
             rgb(132 144 255) 0%,
             rgb(98 189 252 100%));
     --shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.2);
-
 }
-
 html {
     font-size: 62.5%;
-
-
 }
-
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 h1,
 h2,
 h3,
@@ -78,7 +76,7 @@ header section start
 .header {
     padding: 2.8rem;
     height: 10rem;
-    background-color: var(--bg);
+    background-color: red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,10 +156,6 @@ Resuable code section
     grid-template-columns: repeat(4, 1fr);
 
 }
-
-
-
-
 .btn {
     background: var(--heading);
     padding: 1.6rem 3.2rem;

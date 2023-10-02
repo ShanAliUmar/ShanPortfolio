@@ -55,7 +55,7 @@ header{
     }
   }
 
-header nav .left a{
+ nav .left a{
     color:var(--pure);
     text-decoration: none;
     margin-right:2rem;
@@ -66,13 +66,15 @@ header nav .left a{
     -ms-transition:all .3s ease;
     -o-transition:all .3s ease;
 }
-header nav .left a:hover{
+ nav .left a:hover{
     color:var(--primary);
 }
-header nav {
+ nav {
     padding:2rem 0;
+    z-index: 999;
+    position: relative;
 }
-header nav .branding{
+ nav .branding{
     margin-right:3rem;
     color: var(--pure);
     font-size: 40px;
